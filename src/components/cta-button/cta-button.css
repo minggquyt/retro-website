@@ -1,0 +1,22 @@
+.cta-button{
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding-left: 22px;
+    background-color: transparent;
+    border: none;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%);
+    outline: 1px solid var(--accent-color);
+    outline-offset: -1px;  
+}
+.cta-button > div{
+    width: 42px;
+    height: 42px;
+    clip-path: polygon(0 100%, calc(100% - 5px) 100%,100% calc(100% - 5px),  100% 0, 5px 0, 0 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+}
