@@ -1,6 +1,8 @@
 import CTAButton from "./components/cta-button/cta-button.js";
+import ProductCard from "./components/product-card/product-card.js";
 import RenderParts from "./data/render-parts/render-parts-data.js";
 import getProductsData from "./services/get-products-data.js";
+import RetangleProductCard from "./components/retangle-product-card/retangle-product-card.js";
 
 function renderCTAButton(importClass, title, srcImage, width, height, imgWidth, imgHeight, index) {
     const element = document.querySelector(importClass);
@@ -18,48 +20,26 @@ function renderCTAButtonInParts(...parts) {
 
 function renderBestSellingProductsSection1() {
     const renderPart = document.querySelector(".body__bestselling_product--items-section1");
-
+    
     getProductsData()
         .then((data) => {
-            data[0].content.forEach((e, index) => {
-                renderPart.innerHTML += `
-                <div class="body__bestselling_product--item-section1 ${`bestselling_product--section1-item${index + 1}`}">
-                    <div class="body__bestselling_product--image">
-                        <div class="body__bestselling_product--statusproduct">
-                            <div class="body__bestselling_product--status${index+1}">
-                                
-                            </div>
-                            <div class="body__bestselling_product--statusproduct--sale--like">
-                                <img src=${e.images.likeIcon} width="21px" height="18px" alt="">
-                            </div>
-                        </div>
-                        <img class="avatar" src=${e.images.main} width="231px"
-                            height="157px" alt="">
-                    </div>
-                    <div class="body__bestselling_product--description">
-                        <h1 class="oswald-500">${e.name}</h1>
-                        <p class="oswald-300">${e.description}</p>
-                        <div class="body__bestselling_product--description--cost">
-                            <div class="body__bestselling_product--description--costnumber">
-                                <h1 class="active oswald-400">$10.52</h1>
-                                <h1 class="unactive oswald-400">$20.52</h1>
-                            </div>
-                            ${CTAButton("Cart","/assets/images/products/cart.svg",15,13)}
-                        </div>
-                    </div>
-                </div>
-                `
+            data[0].content.forEach( (e,index) => {
+                renderPart.innerHTML += ProductCard(e.name,e.description,e.images,e.price.root);
 
-                const status = document.querySelector(`.body__bestselling_product--status${index+1}`);
-                e.tags.forEach((e) => {
-                    status.innerHTML += `
-                        <div class="body__bestselling_product--statusproduct--${e.toLowerCase()} oswald-500">
-                            ${e}
-                        </div>
-                    `
-                })
+                const renderSALE = document.getElementsByClassName("product-card--statusproduct");
+                const status = document.createElement("div");
+                status.classList.add(`product-card--statusproduct--${e.tags[0].toLowerCase()}`);
+                status.textContent = `${e.tags[0]}`;
+                renderSALE[index].prepend(status);
 
-                
+                if(e.price.discount != null){
+                        const renderCost = document.querySelector(".product-card--description--costnumber");
+                        console.log(renderCost);
+                        const discount = document.createElement("h1");
+                        discount.classList.add("unactive");
+                        renderCost.appendChild(discount); // vì sao lại chưa append được phần tử con ? 
+                }
+
             });
         })
         .catch(err => console.log(err))
@@ -68,11 +48,38 @@ function renderBestSellingProductsSection1() {
 function renderBestSellingProductsSection2(){
     const renderPart = document.querySelector(".body__bestselling_product--items-section2");
 
+    getProductsData()
+        .then((data) => {
+            data[1].content.forEach((card) => {
+                renderPart.innerHTML += RetangleProductCard(card.images,card.name,card.description);
+            })
+        })
+        .catch((error) => console.log(error));
+
+}
+
+function renderPopularProducts(){
+    const renderDiv = document.querySelector(".body__popular_products--items");
+
+    getProductsData()
+        .then((data) => {
+            console.log(data[2].content);
+            data[2].content.forEach((card) => {
+                renderDiv.innerHTML += ProductCard(card.name,card.description,card.images,card.price.root);
+            })
+        })
+        .catch((err) => console.log(err));
 }
 
 function main() {
     renderCTAButtonInParts(...RenderParts);
     renderBestSellingProductsSection1();
     renderBestSellingProductsSection2();
+    renderPopularProducts();
 }
 main();
+
+// Today task: 
+// 1. Responsive trang chủ 
+// 2. Code hoàn thiện trang chủ 
+// 3. Xử lý bug chưa render ra được các sản phẩm có giá giảm

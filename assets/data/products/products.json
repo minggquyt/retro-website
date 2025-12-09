@@ -10,10 +10,7 @@
                 "tags": [
                     "SALE"
                 ],
-                "images": {
-                    "main": "/assets/images/products/computer-mouse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/best-selling-section1/computer-mouse.png",
                 "price": {
                     "root": 20.52,
                     "discount": 10.52
@@ -26,10 +23,7 @@
                 "tags": [
                     "NEW"
                 ],
-                "images": {
-                    "main": "/assets/images/products/reproduction-boxes-chair.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/best-selling-section1/reproduction-boxes-chair.png",
                 "price": {
                     "root": 750.52,
                     "discount": null
@@ -42,10 +36,7 @@
                 "tags": [
                     "NEW"
                 ],
-                "images": {
-                    "main": "/assets/images/products/virtual-reality-glasses-metaverse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/best-selling-section1/virtual-reality-glasses-metaverse.png",
                 "price": {
                     "root": 150.52,
                     "discount": 120.52
@@ -58,10 +49,7 @@
                 "tags": [
                     "SALE"
                 ],
-                "images": {
-                    "main": "/assets/images/products/reproduction-boxes-keyboard.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/best-selling-section1/reproduction-boxes-keyboard.png",
                 "price": {
                     "root": 30.52,
                     "discount": null
@@ -75,51 +63,21 @@
         "content": [
             {
                 "id": 1,
-                "name": "ARGB Gaming Mouse",
-                "description": "Lorem Ipsum, giving information on its origins",
-                "tags": [
-                    "SALE"
-                ],
-                "images": {
-                    "main": "/assets/images/products/computer-mouse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
-                "price": {
-                    "root": 20.52,
-                    "discount": 10.52
-                }
+                "name": "Pro Gaming",
+                "description": "Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspen",
+                "images": "/assets/images/products/best-selling-section2/product-1.png"
             },
             {
                 "id": 2,
-                "name": "Reproduction Boxes",
-                "description": "Lorem Ipsum, giving information on its origins",
-                "tags": [
-                    "NEW"
-                ],
-                "images": {
-                    "main": "/assets/images/products/reproduction-boxes-chair.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
-                "price": {
-                    "root": 750.52,
-                    "discount": null
-                }
+                "name": "New Accessories",
+                "description": "Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspen",
+                "images": "/assets/images/products/best-selling-section2/product-2.png"
             },
             {
                 "id": 3,
-                "name": "Virtual Reality Glasses Metaverse",
-                "description": "Lorem Ipsum, giving information on its origins",
-                "tags": [
-                    "NEW"
-                ],
-                "images": {
-                    "main": "/assets/images/products/virtual-reality-glasses-metaverse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
-                "price": {
-                    "root": 150.52,
-                    "discount": 120.52
-                }
+                "name": "Master Game",
+                "description": "Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspen",
+                "images": "/assets/images/products/best-selling-section2/product-3.png"
             }
         ]
     },
@@ -129,15 +87,12 @@
         "content": [
             {
                 "id": 1,
-                "name": "ARGB Gaming Mouse",
+                "name": "Refurbished Xbox Series X 1TB Console",
                 "description": "Lorem Ipsum, giving information on its origins",
                 "tags": [
                     "SALE"
                 ],
-                "images": {
-                    "main": "/assets/images/products/computer-mouse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/popular/product-1.png",
                 "price": {
                     "root": 20.52,
                     "discount": 10.52
@@ -150,10 +105,7 @@
                 "tags": [
                     "NEW"
                 ],
-                "images": {
-                    "main": "/assets/images/products/reproduction-boxes-chair.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/popular/product-2.png",
                 "price": {
                     "root": 750.52,
                     "discount": null
@@ -166,10 +118,7 @@
                 "tags": [
                     "NEW"
                 ],
-                "images": {
-                    "main": "/assets/images/products/virtual-reality-glasses-metaverse.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/popular/product-3.png",
                 "price": {
                     "root": 150.52,
                     "discount": 120.52
@@ -182,10 +131,7 @@
                 "tags": [
                     "SALE"
                 ],
-                "images": {
-                    "main": "/assets/images/products/reproduction-boxes-keyboard.png",
-                    "likeIcon": "/assets/images/products/like.svg"
-                },
+                "images": "/assets/images/products/popular/product-4.png",
                 "price": {
                     "root": 30.52,
                     "discount": null
