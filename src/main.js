@@ -34,7 +34,6 @@ function renderBestSellingProductsSection1() {
 
                 if(e.price.discount != null){
                         const renderCost = document.querySelector(".product-card--description--costnumber");
-                        console.log(renderCost);
                         const discount = document.createElement("h1");
                         discount.classList.add("unactive");
                         renderCost.appendChild(discount); // vì sao lại chưa append được phần tử con ? 
@@ -63,7 +62,6 @@ function renderPopularProducts(){
 
     getProductsData()
         .then((data) => {
-            console.log(data[2].content);
             data[2].content.forEach((card) => {
                 renderDiv.innerHTML += ProductCard(card.name,card.description,card.images,card.price.root);
             })
@@ -80,6 +78,7 @@ function main() {
 main();
 
 // Today task: 
-// 1. Responsive trang chủ 
-// 2. Code hoàn thiện trang chủ 
+// 1. chỉnh lại CSS cho menubar
+// 2. Làm hoàn thiện responsive cho tablet 
+// 3. Code hoàn thiện trang chủ 
 // 3. Xử lý bug chưa render ra được các sản phẩm có giá giảm
