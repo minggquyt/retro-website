@@ -77,8 +77,3 @@ function main() {
 }
 main();
 
-// Today task: 
-// 1. chỉnh lại CSS cho menubar
-// 2. Làm hoàn thiện responsive cho tablet 
-// 3. Code hoàn thiện trang chủ 
-// 3. Xử lý bug chưa render ra được các sản phẩm có giá giảm
