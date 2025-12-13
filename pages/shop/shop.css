@@ -5,6 +5,7 @@
 }
 .content{
     width: 100%;
+    position: relative;
 }
 .shop_herosection{
     position: relative;
@@ -182,9 +183,6 @@
     padding: 12px 20px;
     font-size: 1.25rem;
     border: 2px solid #707070;
-}
-.shop_products__sidebar--filter > img{
-    width: ;
 }
 .shop_products__product{
     flex: 1;

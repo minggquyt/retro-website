@@ -51,7 +51,7 @@ function renderPopularProducts(){
             })
         })
         .catch((err) => console.log(err));
-}
+}   
 
 function main() {
     renderBestSellingProductsSection1();
@@ -60,8 +60,8 @@ function main() {
 }
 main();
 
-// Today task:
-// 2. Lập trình trang Shop 
-// 3. Nghiên cứu thiết kế single page bằng JS 
+// - main.js: chứa logic render product cho trang chủ 
+// - effect.js: chứa logic effect cho các phần dùng chung 
+
 
 
