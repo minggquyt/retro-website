@@ -1,22 +1,6 @@
-import CTAButton from "./components/cta-button/cta-button.js";
 import ProductCard from "./components/product-card/product-card.js";
-import RenderParts from "./data/render-parts/render-parts-data.js";
 import getProductsData from "./services/get-products-data.js";
 import RetangleProductCard from "./components/retangle-product-card/retangle-product-card.js";
-
-function renderCTAButton(importClass, title, srcImage, width, height, imgWidth, imgHeight, index) {
-    const element = document.querySelector(importClass);
-    element.innerHTML += CTAButton(title, srcImage, imgWidth, imgHeight);
-    const CTAbutton = document.querySelectorAll('.cta-button')[index];
-    CTAbutton.style.width = width;
-    CTAbutton.style.height = height;
-}
-
-function renderCTAButtonInParts(...parts) {
-    parts.forEach((part, index) => {
-        renderCTAButton(part.className, part.buttonName, part.srcImg, part.width, part.height, part.imgWidth, part.imgHeight, index);
-    })
-}
 
 function renderBestSellingProductsSection1() {
     const renderPart = document.querySelector(".body__bestselling_product--items-section1");
@@ -70,10 +54,14 @@ function renderPopularProducts(){
 }
 
 function main() {
-    renderCTAButtonInParts(...RenderParts);
     renderBestSellingProductsSection1();
     renderBestSellingProductsSection2();
     renderPopularProducts();
 }
 main();
+
+// Today task:
+// 2. Lập trình trang Shop 
+// 3. Nghiên cứu thiết kế single page bằng JS 
+
 
