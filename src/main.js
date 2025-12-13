@@ -60,8 +60,6 @@ function main() {
 }
 main();
 
-// - main.js: chứa logic render product cho trang chủ 
-// - effect.js: chứa logic effect cho các phần dùng chung 
 
 
 

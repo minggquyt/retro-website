@@ -1,0 +1,183 @@
+@import url(../../src/variable.css);
+
+.content {
+    width: 100%;
+    position: relative;
+}
+
+.product_detail_herosection {
+    width: 100%;
+    height: 369px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 100px;
+    color: white;
+    position: relative;
+    margin-top: 115px;
+    background-size: cover;
+    background-image: url(/assets/images/pages/product-detail/product-detail-herosection.png);
+}
+
+.product_detail_herosection::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: black;
+    opacity: 0.6;
+}
+
+.product_detail_herosection>h1 {
+    position: relative;
+    font-size: 3rem;
+}
+
+.product_detail_herosection>p {
+    position: relative;
+    font-size: 2rem;
+}
+
+.product_detail_content {
+    padding: 100px 95px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    background-color: var(--primary-color);
+}
+.product_detail_content  > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.product_detail_content--title{
+    color: white;
+}
+.product_detail_leftcontent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    background-color:var(--primary-color);
+}
+
+.product_detail_leftcontent--image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product_detail_leftcontent--image_items {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.product_detail_leftcontent--image-main {
+    height: 469px;
+    background-color: #2F3236;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.product_detail_leftcontent--image-main > img{
+    width: 458px;
+    height: 440px;
+    object-fit: contain;
+    min-width: 0;
+}
+.product_detail_leftcontent--image_items > div:nth-child(1){
+    border: 2px solid red;
+}
+.product_detail_leftcontent--image_items > div {
+    width: 120px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F3236;
+}
+.product_detail_rightcontent{
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+.product_detail_rightcontent--filter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product_detail_rightcontent--filter > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product_detail_rightcontent--filter_color > ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+.product_detail_rightcontent--filter_color > ul > li{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+}
+.product_detail_rightcontent--filter_quantitybutton{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border: 2px solid #BBBBBB;
+}
+.product_detail_rightcontent--filter_quantitybutton-minus,
+.product_detail_rightcontent--filter_quantitybutton-plus{
+    width: 55px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.product_detail_rightcontent--filter_quantitybutton-minus{
+    border-right: 2px solid #BBBBBB;
+}
+.product_detail_rightcontent--filter_quantitybutton-plus{
+    border-left: 2px solid #BBBBBB;
+}
+@media (min-width: 672px) and (max-width: 1280px){
+    .product_detail_content{
+        padding-inline: 40px;
+    }    
+    .product_detail_content > div:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+    }
+    .product_detail_herosection{
+        padding-inline: 40px;
+    }
+}
+@media (min-width: 320px) and (max-width: 672px){
+    .product_detail_content{
+        padding-inline: 20px;
+    }    
+    .product_detail_content > div:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+    }
+    .product_detail_leftcontent{
+        width: 100%;
+        align-items: center;
+    }
+    .product_detail_herosection{
+        padding-inline: 20px;
+        flex-wrap: wrap;
+    }
+}
